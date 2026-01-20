@@ -1,0 +1,580 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f4f7;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    color: #333;
+}
+
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 25px 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2;
+    margin-top: 33px;
+}
+
+header p {
+    margin: -7px;
+    font-size: 1.1;
+}
+
+.Welcome-banner {
+    width: 100%;
+    height: 400px;
+    background: url('images/ALL.jpg') center/cover no-repeat;
+    position: relative; /* REQUIRED */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* center main content */
+    text-align: center;
+    color: white;
+}
+
+    .Welcome-banner::after {
+        content: "";
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background-color: rgba(29, 27, 27, 0.35); /* lighter dark overlay */
+
+    }
+
+    /* WELCOME NAVIGATION */
+ .welcome-nav {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    display: flex;
+    gap: 25px;
+    font-size: 0.95em;
+    z-index: 2; /* above overlay */
+}
+
+.welcome-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.welcome-nav a:hover {
+    color: #f0c75e;
+}
+
+
+ /* WELCOME CONTENT */
+    .Welcome-content {
+        margin-top: 40px; /* push it below the nav */
+        position: relative;
+        z-index: 3;
+    }
+
+    .Welcome-banner h1 {
+        font-size: 3em;
+        margin: 0 0 15px 0;
+    }
+
+    .Welcome-banner p {
+        font-size: 1.2em;
+        margin-bottom: 20px;
+        margin-top: -25px;
+    }
+
+    .Welcome-banner .btn {
+        padding: 10px 25px;
+        background-color: #2c3e50;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: 0.3s;
+    }
+
+    .Welcome-banner .btn:hover {
+        background-color: #1a252f;
+    }
+
+/* ABOUT BARANGAY */
+.about-barangay {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.about-barangay h2 {
+    margin-top: 0;
+    color: #2c3e50;
+    text-align: left;
+}
+
+.about-barangay p {
+    text-align: justify;
+    font-size: 0.95em;
+}
+
+.about-more-btn {
+    display: inline-block;
+    margin-top: 15px;
+    color: #2c3e50;
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.about-more-btn:hover {
+    color: #1a252f;
+    border-bottom: 2px solid #1a252f;
+}
+
+
+ /* MAP DESIGN */
+.map-section {
+    max-width: 1000px;
+    margin: 30px auto; 
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    text-align: left;
+}
+
+.map-section h2 {
+    margin-top: 0;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.map-container {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* ADDRESS DETAILS */
+/* Barangay Details Section */
+.barangay-details {
+    display: flex;              /* make it a row */
+    justify-content: space-between;
+    align-items: flex-start;    /* top align image and details */
+    gap: 40px;
+    background: #f2f4f7;
+    padding: 50px 30px;
+    margin-top: 40px;
+    border-radius: 16px;
+    flex-wrap: wrap;  
+}
+
+/* Text info layout */
+.details-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1; /* take left side space */
+}
+
+.detail-box {
+    background: white;
+    padding: 20px;
+    width: 200px;
+    border-radius: 14px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+.detail-box h3 {
+    margin-top: 0;
+    color: #2c3e50;
+}
+
+.detail-box p {
+    text-align: left;
+}
+
+/* Barangay Hall Image */
+.barangay-hall {
+    flex: 3;                 /* take right side space */
+    display: flex;            /* make a column flex */
+    flex-direction: column;   /* stack title + image vertically */
+    align-items: center;      /* center horizontally */
+    min-width: 250px;         /* prevent image from shrinking too much */
+    gap: -5px;
+    margin-top: -50px; /* move the whole hall section up */   
+}
+
+.barangay-hall img {
+    width: 100%;
+    max-width: 550px; /* optional max width */
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.barangay-hall h3 {
+    margin-bottom: 5px;
+    margin-top: 50px;
+}
+
+
+
+  /* BARANGAY OFFICIALS */
+.Barangay-officials-header {
+            color: white;
+            text-align: center;
+            font-size: 2em;
+            margin-top: -50px;
+            margin-bottom: 40px; /* space between title and first member */
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+
+ /* MEMBER CONTAINER DESIGN */
+        .container {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 30px;
+            text-align: center; 
+            font-size: smaller;
+            gap: 20px;
+            background-color: #0a2138; /* entire container background */
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05); /* optional shadow */
+        }
+
+        .captain {
+           display: inline-block;
+           margin-bottom: 30px;
+        }
+
+        .two-column {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 30px; /* add extra space for Captain's overlapping picture */
+            margin-bottom: 30px;
+    
+        }
+
+        .kagawad-column {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); 
+            gap: 40px;
+            justify-items: center; /* center each card in its column */
+            margin-top: 30px;
+            margin-bottom: 30px;
+            text-align: left; /* prevents content from stretching like captain */
+        }
+
+        .kagawad-column-last {
+            display: grid;
+            gap: 40px;
+            grid-template-columns: repeat(3, 1fr);
+            margin-top: 30px;
+            margin-bottom: 30px;
+            justify-content: center;
+        }
+
+        .profile-box {
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 60px 10px 10px 10px; /* extra top padding for image */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+            text-align: center;
+            position: relative;
+            width: 100%;
+            max-width: 300px;
+            margin-bottom: 25px;
+            margin-top: 10px;
+        }
+
+        .profile-box h3 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+
+        .profile-box p {
+            margin: 6px 0;
+        }
+
+        .profile-pic {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid #2c3e50;
+        }
+
+        .profile-pic-container {
+            position: absolute;
+            top: -50px; /* half of the picture height */
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+/* SK Section */
+.sk-section {
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 2px solid rgba(255,255,255,0.2);
+    text-align: center;
+}
+
+.sk-title {
+    color: white;
+    margin-bottom: 40px;
+    font-size: 2em;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-top: -10px;
+}
+
+/* SK profile with left image */
+.sk-head-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+    text-align: left; /* align text to left */
+}
+
+.profile-pic-container-left {
+    position: relative;
+    top: 0; /* remove top offset since image is inline now */
+}
+
+.profile-pic-container-left img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid #2c3e50;
+    object-fit: cover;
+}
+
+.sk-details h3 {
+    margin-top: 0;
+    color: #2c3e50;
+}
+
+.sk-details p {
+    margin: 6px 0;
+}
+
+/* BARANGAY LOGO */
+.barangay-logo {
+    position: relative;
+    width:100%;
+    text-align: center;
+    margin-bottom: -143px; 
+    z-index: 2; /* make sure logo is on top */
+}
+
+.barangay-logo img {
+    width: 130px;        /* size of the logo */
+    height: 130px;       /* square to make it circular */
+    border-radius: 50%;  /* circular shape */
+    object-fit: cover;
+    border: 3px solid #2c3e50;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    position: relative;
+    top: 50%;            /* move half the logo downward over the hero banner */
+    transform: translateY(-50%);
+}
+
+/* SOCIAL MEDIA */
+/* SOCIAL MEDIA SECTION */
+.social-media-section {
+    background-color: #ffffff;
+    padding: 50px 30px;
+    text-align: center;
+    margin-top: 40px;
+    border-radius: 16px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.06);
+}
+
+.social-media-section h2 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.social-subtext {
+    font-size: 0.95em;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+/* Social cards layout */
+.social-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Individual social card */
+.social-card {
+    background-color: #f2f4f7;
+    width: 160px;
+    padding: 20px;
+    border-radius: 14px;
+    text-decoration: none;
+    color: #2c3e50;
+    font-weight: bold;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.social-card img {
+    width: 40px;
+    margin-bottom: 10px;
+}
+
+.social-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+.info-container{
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+
+/* CONTAINER
+.container {
+    padding: 20px;
+    max-width: 1100px;
+    margin: auto;
+} */
+
+
+/* HIGHLIGHTS */
+.highlights {
+    background-color: var(--white);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 24px;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 20px;
+}
+
+.highlight-box {
+    background-color: white;
+    color: var(--white);
+    border-radius: 10px;
+    padding: 20px;
+    min-height: 150px;
+}
+
+.highlight-text h3 {
+    margin-bottom: 10px;
+}
+
+.highlight-text ul {
+    list-style: none;
+}
+
+.highlight-text li {
+    margin-bottom: 8px;
+}
+
+
+
+/* EVENTS */
+.events {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+}
+
+.event-card {
+    background-color:  white;
+    border-radius: 10px;
+    padding: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.event-card h3 {
+    margin-bottom: 6px;
+}
+
+
+/* INFO */
+.info {
+    background-color: var(--white);
+    border-radius: 12px;
+    margin-top: -40px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.info h2 {
+    margin-bottom: 10px;
+}
+
+/* CARDS */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.card h3 {
+    margin-bottom: 10px;
+}
+
+.card.center {
+    background-color: white;
+    color: var(--white);
+}
+
+/* POPULATION */
+.population {
+    background-color: rgb(8, 22, 54);
+    border-radius: 12px;
+    margin-top: 20px;
+    
+    text-align: center;
+}
+
+.population h2 {
+    margin-bottom: 8px;
+}
